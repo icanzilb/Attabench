@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13189.4"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AttabenchDocument" customModule="Attabench" customModuleProvider="target">
@@ -161,11 +159,11 @@
                                                     </subviews>
                                                     <nil key="backgroundColor"/>
                                                 </clipView>
-                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="VdQ-X3-4eM">
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="VdQ-X3-4eM">
                                                     <rect key="frame" x="0.0" y="461" width="225" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
-                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="2jS-Ef-bUb">
+                                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="2jS-Ef-bUb">
                                                     <rect key="frame" x="-16" y="0.0" width="16" height="0.0"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
@@ -196,13 +194,13 @@
                                                         </connections>
                                                     </searchField>
                                                     <button toolTip="Show or hide the Run Options area" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-F8-T8v">
-                                                        <rect key="frame" x="232" y="-2" width="18" height="32"/>
+                                                        <rect key="frame" x="232" y="5" width="18" height="18"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="OpenUpTemplate" imagePosition="only" alignment="center" alternateImage="CloseDownTemplate" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="3I8-uP-ykt">
                                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="showHideRunOptions:" target="-2" id="bKD-zA-KRg"/>
+                                                            <action selector="toggleRunOptions:" target="-2" id="nIk-ve-FZA"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -234,7 +232,7 @@
                                                                             <rect key="frame" x="80" y="29" width="81" height="19"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="seconds" drawsBackground="YES" id="0O5-SR-Myp">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -254,7 +252,7 @@
                                                                             <rect key="frame" x="80" y="54" width="156" height="19"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="count" drawsBackground="YES" id="LJX-ds-F56">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -286,7 +284,7 @@
                                                                             <rect key="frame" x="167" y="29" width="80" height="19"/>
                                                                             <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="seconds" drawsBackground="YES" id="oPY-wM-5m9">
                                                                                 <font key="font" metaFont="smallSystem"/>
-                                                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -377,30 +375,30 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7l-6D-bUv">
-                                                <rect key="frame" x="5" y="-2" width="434" height="32"/>
+                                                <rect key="frame" x="5" y="5" width="434" height="18"/>
                                                 <subviews>
                                                     <button toolTip="Show or hide execution parameters" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-1I-7US" userLabel="Show Left Pane Button">
-                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="18" height="18"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="OpenRightTemplate" imagePosition="only" alignment="center" alternateImage="CloseLeftTemplate" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="3Wc-Lx-7Zj">
                                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="showHideLeftPane:" target="-2" id="Uwl-eY-KyQ"/>
+                                                            <action selector="toggleSidebar:" target="-2" id="JON-GB-8wf"/>
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Show or hide the Console area" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vns-ud-AWF">
-                                                        <rect key="frame" x="24" y="0.0" width="18" height="32"/>
+                                                        <rect key="frame" x="24" y="0.0" width="18" height="18"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="OpenUpTemplate" imagePosition="only" alignment="center" alternateImage="CloseDownTemplate" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BOy-29-Axj">
                                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="showHideConsole:" target="-2" id="eEg-79-ZOa"/>
+                                                            <action selector="toggleConsole:" target="-2" id="yO6-jf-eXV"/>
                                                         </connections>
                                                     </button>
                                                     <textField horizontalHuggingPriority="1" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nAl-9b-Vd5" customClass="StatusLabel" customModule="Attabench" customModuleProvider="target">
-                                                        <rect key="frame" x="46" y="8" width="320" height="17"/>
+                                                        <rect key="frame" x="46" y="1" width="320" height="17"/>
                                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" enabled="NO" sendsActionOnEndEditing="YES" title="Status Message" usesSingleLineMode="YES" id="uL1-bP-Rr1">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
@@ -408,7 +406,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button toolTip="Clear Console area" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="UJD-AI-pDj">
-                                                        <rect key="frame" x="370" y="6" width="40" height="19"/>
+                                                        <rect key="frame" x="370" y="-1" width="40" height="19"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Clear" bezelStyle="texturedRounded" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZAz-uA-Lhb">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="smallSystem"/>
@@ -418,13 +416,13 @@
                                                         </connections>
                                                     </button>
                                                     <button toolTip="Show or hide chart options" horizontalHuggingPriority="255" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JEA-rx-7dd" userLabel="Show Right Pane Button">
-                                                        <rect key="frame" x="416" y="0.0" width="18" height="32"/>
+                                                        <rect key="frame" x="416" y="0.0" width="18" height="18"/>
                                                         <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="CloseLeftTemplate" imagePosition="only" alignment="center" alternateImage="OpenRightTemplate" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="4vp-yf-ZJv">
                                                             <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                         <connections>
-                                                            <action selector="showHideRightPane:" target="-2" id="MOA-zG-c5E"/>
+                                                            <action selector="toggleInspector:" target="-2" id="sKy-Tg-v8d"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -457,7 +455,7 @@
                                         <subviews>
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oS-10-PFy">
                                                 <rect key="frame" x="0.0" y="0.0" width="442" height="135"/>
-                                                <clipView key="contentView" id="IGZ-po-v1k">
+                                                <clipView key="contentView" drawsBackground="NO" id="IGZ-po-v1k">
                                                     <rect key="frame" x="0.0" y="0.0" width="442" height="135"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
@@ -465,7 +463,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="442" height="135"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <size key="minSize" width="442" height="135"/>
                                                             <size key="maxSize" width="705" height="10000000"/>
                                                             <attributedString key="textStorage">
@@ -484,16 +482,15 @@
                                                                     </attributes>
                                                                 </fragment>
                                                             </attributedString>
-                                                            <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </clipView>
-                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pMa-cS-a2q">
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="pMa-cS-a2q">
                                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
-                                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="SWM-gY-A1g">
+                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="SWM-gY-A1g">
                                                     <rect key="frame" x="426" y="0.0" width="16" height="135"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
@@ -870,7 +867,7 @@
                                                                     <rect key="frame" x="80" y="35" width="67" height="19"/>
                                                                     <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5s" drawsBackground="YES" usesSingleLineMode="YES" id="exA-zD-jch">
                                                                         <font key="font" metaFont="smallSystem"/>
-                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
@@ -878,7 +875,7 @@
                                                                     <rect key="frame" x="153" y="35" width="67" height="19"/>
                                                                     <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="5s" drawsBackground="YES" usesSingleLineMode="YES" id="IlV-ZQ-fDg">
                                                                         <font key="font" metaFont="smallSystem"/>
-                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>

@@ -943,21 +943,22 @@ extension AttabenchDocument {
 }
 
 extension AttabenchDocument: NSSplitViewDelegate {
-    @IBAction func showHideLeftPane(_ sender: Any) {
+    @IBAction func toggleSidebar(_ sender: Any) {
         guard let pane = self.leftPane else { return }
         pane.isHidden = !pane.isHidden
     }
 
-    @IBAction func showHideRightPane(_ sender: Any) {
+    @IBAction func toggleInspector(_ sender: Any) {
         guard let pane = self.rightPane else { return }
         pane.isHidden = !pane.isHidden
     }
 
-    @IBAction func showHideRunOptions(_ sender: NSButton) {
+    @IBAction func toggleRunOptions(_ sender: NSButton) {
         guard let pane = self.runOptionsPane else { return }
         pane.isHidden = !pane.isHidden
     }
-    @IBAction func showHideConsole(_ sender: NSButton) {
+
+    @IBAction func toggleConsole(_ sender: NSButton) {
         guard let pane = self.consolePane else { return }
         pane.isHidden = !pane.isHidden
     }
