@@ -200,7 +200,7 @@ public class Attaresult: NSObject, Codable {
 
         if let bookmarkData = try container.decodeIfPresent(Data.self, forKey: .source) {
             var stale = false
-            if let url = try? URL(resolvingBookmarkData: bookmarkData, options: [], relativeTo: nil, bookmarkDataIsStale: &stale) {
+            if let url = ((try? URL(resolvingBookmarkData: bookmarkData, options: [], relativeTo: nil, bookmarkDataIsStale: &stale)) as URL??) {
                 self.benchmarkURL.value = url
             }
         }
@@ -276,7 +276,7 @@ public class Attaresult: NSObject, Codable {
     // MARK: Measurements
 
     public func remove(_ task: Task) {
-        let i = tasks.value.index(of: task)!
+        let i = tasks.value.firstIndex(of: task)!
         tasks.remove(at: i)
         tasksByName.removeValue(forKey: task.name)
     }

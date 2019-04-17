@@ -12,8 +12,6 @@
 		BB6CD6BA1F49DBA90091697D /* Benchmarking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB6CD67B1F49D6BB0091697D /* Benchmarking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BB6CD6BB1F49DBA90091697D /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6CD6801F49D79C0091697D /* BigInt.framework */; };
 		BB6CD6BC1F49DBA90091697D /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB6CD6801F49D79C0091697D /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BB6CD6BD1F49DBA90091697D /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6CD6811F49D79C0091697D /* SipHash.framework */; };
-		BB6CD6BE1F49DBA90091697D /* SipHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB6CD6811F49D79C0091697D /* SipHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBCA26CE1F596F8100C6FB74 /* run.sh in Resources */ = {isa = PBXBuildFile; fileRef = BBCA26CD1F596F8100C6FB74 /* run.sh */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +24,6 @@
 			files = (
 				BB6CD6BA1F49DBA90091697D /* Benchmarking.framework in Embed Frameworks */,
 				BB6CD6BC1F49DBA90091697D /* BigInt.framework in Embed Frameworks */,
-				BB6CD6BE1F49DBA90091697D /* SipHash.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +35,6 @@
 		BB4F15481F3FC8DA003C05C3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		BB6CD67B1F49D6BB0091697D /* Benchmarking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Benchmarking.framework; path = "../../../Library/Developer/Xcode/DerivedData/Attabench-eevvdypphqqzvmdyjjrvtcchxnjf/Build/Products/Debug/Benchmarking.framework"; sourceTree = "<group>"; };
 		BB6CD6801F49D79C0091697D /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BigInt.framework; path = ../Carthage/Build/Mac/BigInt.framework; sourceTree = "<group>"; };
-		BB6CD6811F49D79C0091697D /* SipHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SipHash.framework; path = ../Carthage/Build/Mac/SipHash.framework; sourceTree = "<group>"; };
 		BB6CD68C1F49DB4C0091697D /* Benchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6CD6971F49DB4C0091697D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBCA26CD1F596F8100C6FB74 /* run.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = run.sh; sourceTree = "<group>"; };
@@ -51,7 +47,6 @@
 			files = (
 				BB6CD6B91F49DBA90091697D /* Benchmarking.framework in Frameworks */,
 				BB6CD6BB1F49DBA90091697D /* BigInt.framework in Frameworks */,
-				BB6CD6BD1F49DBA90091697D /* SipHash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				BB6CD6801F49D79C0091697D /* BigInt.framework */,
-				BB6CD6811F49D79C0091697D /* SipHash.framework */,
 				BB6CD67B1F49D6BB0091697D /* Benchmarking.framework */,
 			);
 			name = Frameworks;

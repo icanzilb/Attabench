@@ -62,8 +62,8 @@ public final class Task: Codable, Hashable {
         return (sizeBounds, timeBounds)
     }
 
-    public var hashValue: Int {
-        return name.hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
     }
 
     public static func ==(left: Task, right: Task) -> Bool {

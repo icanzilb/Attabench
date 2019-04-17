@@ -1,4 +1,3 @@
-github "attaswift/GlueKit" "master"
-github "attaswift/SipHash" "swift4"
-github "attaswift/BigInt" "swift4"
+github "zwaldowski/GlueKit" "zwaldowski/swift-5.0"
+github "attaswift/BigInt" "master"
 github "attaswift/OptionParser" "master"

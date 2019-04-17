@@ -50,7 +50,6 @@
 		BBCA26FD1F59B8A400C6FB74 /* TimeSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9889CA1F3F86EB00014740 /* TimeSample.swift */; };
 		BBCC9F881F5ABE7300AE36DE /* BTree.framework.dSYM in Copy dSYMs for Dependencies */ = {isa = PBXBuildFile; fileRef = BB8E0E1B1E33D69100505773 /* BTree.framework.dSYM */; };
 		BBCC9F891F5ABE7300AE36DE /* GlueKit.framework.dSYM in Copy dSYMs for Dependencies */ = {isa = PBXBuildFile; fileRef = BB8E0E1C1E33D69100505773 /* GlueKit.framework.dSYM */; };
-		BBCC9F8A1F5ABE7700AE36DE /* SipHash.framework.dSYM in Copy dSYMs for Dependencies */ = {isa = PBXBuildFile; fileRef = BB8E0E1D1E33D69100505773 /* SipHash.framework.dSYM */; };
 		BBCC9F8B1F5ABE7900AE36DE /* BigInt.framework.dSYM in Copy dSYMs for Dependencies */ = {isa = PBXBuildFile; fileRef = BBABCDD01F3DDDFF009CA8BC /* BigInt.framework.dSYM */; };
 		BBCC9F8C1F5AD00400AE36DE /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB888161F3FB0210072E0E2 /* BigInt.framework */; };
 		BBCC9F8D1F5AD00400AE36DE /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBB888161F3FB0210072E0E2 /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,8 +57,6 @@
 		BBCC9F8F1F5AD00400AE36DE /* BTree.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0E101E33D64000505773 /* BTree.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBCC9F901F5AD00400AE36DE /* GlueKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0E111E33D64000505773 /* GlueKit.framework */; };
 		BBCC9F911F5AD00400AE36DE /* GlueKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0E111E33D64000505773 /* GlueKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BBCC9F921F5AD00400AE36DE /* SipHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0E121E33D64000505773 /* SipHash.framework */; };
-		BBCC9F931F5AD00400AE36DE /* SipHash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB8E0E121E33D64000505773 /* SipHash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBCC9F941F5AD00400AE36DE /* BenchmarkRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4F155E1F409882003C05C3 /* BenchmarkRunner.framework */; };
 		BBCC9F951F5AD00400AE36DE /* BenchmarkRunner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB4F155E1F409882003C05C3 /* BenchmarkRunner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBCC9F981F5AD00400AE36DE /* BenchmarkIPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCA26A71F5853C200C6FB74 /* BenchmarkIPC.framework */; };
@@ -122,7 +119,6 @@
 			files = (
 				BBCC9F881F5ABE7300AE36DE /* BTree.framework.dSYM in Copy dSYMs for Dependencies */,
 				BBCC9F891F5ABE7300AE36DE /* GlueKit.framework.dSYM in Copy dSYMs for Dependencies */,
-				BBCC9F8A1F5ABE7700AE36DE /* SipHash.framework.dSYM in Copy dSYMs for Dependencies */,
 				BBCC9F8B1F5ABE7900AE36DE /* BigInt.framework.dSYM in Copy dSYMs for Dependencies */,
 			);
 			name = "Copy dSYMs for Dependencies";
@@ -135,7 +131,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BBCC9F8D1F5AD00400AE36DE /* BigInt.framework in Embed Frameworks */,
-				BBCC9F931F5AD00400AE36DE /* SipHash.framework in Embed Frameworks */,
 				BBCC9F9D1F5AD00400AE36DE /* BenchmarkCharts.framework in Embed Frameworks */,
 				BBCC9FA11F5AD00400AE36DE /* BenchmarkModel.framework in Embed Frameworks */,
 				BBCC9F8F1F5AD00400AE36DE /* BTree.framework in Embed Frameworks */,
@@ -191,10 +186,8 @@
 		BB8E0E0F1E33D43400505773 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		BB8E0E101E33D64000505773 /* BTree.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BTree.framework; path = Carthage/Build/Mac/BTree.framework; sourceTree = "<group>"; };
 		BB8E0E111E33D64000505773 /* GlueKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GlueKit.framework; path = Carthage/Build/Mac/GlueKit.framework; sourceTree = "<group>"; };
-		BB8E0E121E33D64000505773 /* SipHash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SipHash.framework; path = Carthage/Build/Mac/SipHash.framework; sourceTree = "<group>"; };
 		BB8E0E1B1E33D69100505773 /* BTree.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = BTree.framework.dSYM; path = Carthage/Build/Mac/BTree.framework.dSYM; sourceTree = "<group>"; };
 		BB8E0E1C1E33D69100505773 /* GlueKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = GlueKit.framework.dSYM; path = Carthage/Build/Mac/GlueKit.framework.dSYM; sourceTree = "<group>"; };
-		BB8E0E1D1E33D69100505773 /* SipHash.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SipHash.framework.dSYM; path = Carthage/Build/Mac/SipHash.framework.dSYM; sourceTree = "<group>"; };
 		BB9889C81F3F85F200014740 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		BB9889CA1F3F86EB00014740 /* TimeSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSample.swift; sourceTree = "<group>"; };
 		BB9889CC1F3F887A00014740 /* Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timestamp.swift; sourceTree = "<group>"; };
@@ -244,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBCC9F8C1F5AD00400AE36DE /* BigInt.framework in Frameworks */,
-				BBCC9F921F5AD00400AE36DE /* SipHash.framework in Frameworks */,
 				BBCC9F9C1F5AD00400AE36DE /* BenchmarkCharts.framework in Frameworks */,
 				BBCC9FA01F5AD00400AE36DE /* BenchmarkModel.framework in Frameworks */,
 				BBCC9F8E1F5AD00400AE36DE /* BTree.framework in Frameworks */,
@@ -393,14 +385,12 @@
 			children = (
 				BB8E0E1B1E33D69100505773 /* BTree.framework.dSYM */,
 				BB8E0E1C1E33D69100505773 /* GlueKit.framework.dSYM */,
-				BB8E0E1D1E33D69100505773 /* SipHash.framework.dSYM */,
 				BBABCDD01F3DDDFF009CA8BC /* BigInt.framework.dSYM */,
 				BBF83F911F533ADD006F61C5 /* OptionParser.framework.dSYM */,
 				BBF83F921F533AE7006F61C5 /* OptionParser.framework */,
 				BBB888161F3FB0210072E0E2 /* BigInt.framework */,
 				BB8E0E101E33D64000505773 /* BTree.framework */,
 				BB8E0E111E33D64000505773 /* GlueKit.framework */,
-				BB8E0E121E33D64000505773 /* SipHash.framework */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -617,15 +607,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Károly Lőrentey";
 				TargetAttributes = {
 					BB4F155D1F409882003C05C3 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					BB65B0F21F59BBA4007EB717 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -640,22 +632,24 @@
 					};
 					BBCA26A61F5853C200C6FB74 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					BBCA26D91F59B82C00C6FB74 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					BBCA26EC1F59B88E00C6FB74 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = BB1DA9C81E2E5923000F2B03 /* Build configuration list for PBXProject "Attabench" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -866,6 +860,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -873,10 +868,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -911,6 +908,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -918,10 +916,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -957,6 +957,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -964,10 +965,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1009,6 +1012,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -1016,10 +1020,12 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -1073,7 +1079,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1142,7 +1148,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1211,7 +1217,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1280,7 +1286,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1309,7 +1315,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.attaswift.Attabench;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1371,7 +1377,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Optimized;
 		};
@@ -1433,7 +1439,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = WholeModule;
 		};
@@ -1495,7 +1501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Unchecked;
 		};
@@ -1626,7 +1632,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1690,7 +1696,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1754,7 +1760,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1818,7 +1824,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1854,7 +1860,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1923,7 +1929,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1992,7 +1998,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2061,7 +2067,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2097,7 +2103,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2165,7 +2171,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2233,7 +2239,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2301,7 +2307,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

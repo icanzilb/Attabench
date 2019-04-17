@@ -25,22 +25,22 @@ enum ConsoleAttributes {
         style.firstLineHeadIndent = 12
         return style
     }()
-    static let standardOutput: [NSAttributedStringKey: Any] = [
+    static let standardOutput: [NSAttributedString.Key: Any] = [
         .font: NSFont(name: "Menlo-Regular", size: 12) ?? NSFont.systemFont(ofSize: 12, weight: .regular),
         .foregroundColor: NSColor(white: 0.3, alpha: 1),
         .paragraphStyle: indentedParagraphStyle
     ]
-    static let standardError: [NSAttributedStringKey: Any] = [
+    static let standardError: [NSAttributedString.Key: Any] = [
         .font: NSFont(name: "Menlo-Bold", size: 12) ?? NSFont.systemFont(ofSize: 12, weight: .bold),
         .foregroundColor: NSColor(white: 0.3, alpha: 1),
         .paragraphStyle: indentedParagraphStyle
     ]
-    static let statusMessage: [NSAttributedStringKey: Any] = [
+    static let statusMessage: [NSAttributedString.Key: Any] = [
         .font: NSFont.systemFont(ofSize: 12, weight: .medium),
         .foregroundColor: NSColor.black,
         .paragraphStyle: NSParagraphStyle.default
     ]
-    static let errorMessage: [NSAttributedStringKey: Any] = [
+    static let errorMessage: [NSAttributedString.Key: Any] = [
         .font: NSFont.systemFont(ofSize: 12, weight: .bold),
         .foregroundColor: NSColor.black,
         .paragraphStyle: NSParagraphStyle.default
@@ -250,7 +250,7 @@ class AttabenchDocument: NSDocument, BenchmarkDelegate {
     override var windowNibName: NSNib.Name? {
         // Returns the nib file name of the document
         // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this property and override -makeWindowControllers instead.
-        return NSNib.Name("AttabenchDocument")
+        return "AttabenchDocument"
     }
 
     override func windowControllerDidLoadNib(_ windowController: NSWindowController) {
@@ -573,7 +573,7 @@ extension AttabenchDocument {
         case status
     }
     func log(_ kind: LogKind, _ text: String) {
-        let attributes: [NSAttributedStringKey: Any]
+        let attributes: [NSAttributedString.Key: Any]
         switch kind {
         case .standardOutput: attributes = ConsoleAttributes.standardOutput
         case .standardError: attributes = ConsoleAttributes.standardError
@@ -1019,9 +1019,8 @@ extension AttabenchDocument {
 }
 
 extension AttabenchDocument: NSTextFieldDelegate {
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         guard obj.object as AnyObject === self.taskFilterTextField else {
-            super.controlTextDidChange(obj)
             return
         }
         let v = self.taskFilterTextField!.stringValue
