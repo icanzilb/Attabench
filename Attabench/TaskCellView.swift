@@ -12,10 +12,6 @@ class TaskCellView: NSTableCellView {
 
     weak var context: AttabenchDocument? // FIXME argh
 
-    override func awakeFromNib() {
-        self.appearance = NSAppearance(named: .vibrantLight)
-    }
-
     private var taskConnections = Connector()
     var task: Task? = nil {
         didSet {
