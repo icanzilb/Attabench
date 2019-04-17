@@ -27,22 +27,22 @@ enum ConsoleAttributes {
     }()
     static let standardOutput: [NSAttributedString.Key: Any] = [
         .font: NSFont(name: "Menlo-Regular", size: 12) ?? NSFont.systemFont(ofSize: 12, weight: .regular),
-        .foregroundColor: NSColor(white: 0.3, alpha: 1),
+        .foregroundColor: NSColor.tertiaryLabelColor,
         .paragraphStyle: indentedParagraphStyle
     ]
     static let standardError: [NSAttributedString.Key: Any] = [
         .font: NSFont(name: "Menlo-Bold", size: 12) ?? NSFont.systemFont(ofSize: 12, weight: .bold),
-        .foregroundColor: NSColor(white: 0.3, alpha: 1),
+        .foregroundColor: NSColor.secondaryLabelColor,
         .paragraphStyle: indentedParagraphStyle
     ]
     static let statusMessage: [NSAttributedString.Key: Any] = [
         .font: NSFont.systemFont(ofSize: 12, weight: .medium),
-        .foregroundColor: NSColor.black,
+        .foregroundColor: NSColor.labelColor,
         .paragraphStyle: NSParagraphStyle.default
     ]
     static let errorMessage: [NSAttributedString.Key: Any] = [
         .font: NSFont.systemFont(ofSize: 12, weight: .bold),
-        .foregroundColor: NSColor.black,
+        .foregroundColor: NSColor.labelColor,
         .paragraphStyle: NSParagraphStyle.default
     ]
 }
