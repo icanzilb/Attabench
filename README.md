@@ -50,29 +50,11 @@ Follow these steps to compile Attabench on your own:
     cd Attabench
     ```
 
-2. Install [Carthage][carthage] if you don't already have it. (This assumes you have [Homebrew][brew] installed.)
-
-    ```
-    brew install carthage
-    ```
-
-3. Retrieve and build dependencies ([SipHash][siphash], [BTree][btree] and [GlueKit][gluekit]).
-
-    ```
-    carthage bootstrap --platform Mac
-    ```
-
-4. Open the project file in Xcode 9, then build and run the Attabench target.
+2. Open the project file in Xcode 12, then build and run the Attabench target.
 
     ```
     open Attabench.xcodeproj
     ```
-
-[carthage]: https://github.com/Carthage/Carthage
-[brew]: https://brew.sh
-[siphash]: https://github.com/attaswift/SipHash
-[btree]: https://github.com/attaswift/BTree
-[gluekit]: https://github.com/attaswift/GlueKit
 
 ## Usage
 

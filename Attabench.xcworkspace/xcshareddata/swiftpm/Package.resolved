@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "BigInt",
-        "repositoryURL": "https://github.com/attaswift/BigInt",
+        "repositoryURL": "https://github.com/attaswift/BigInt.git",
         "state": {
           "branch": "master",
           "revision": "114862bdaca21974d9587ec41421fb23b302c309",
@@ -21,7 +21,7 @@
       },
       {
         "package": "GlueKit",
-        "repositoryURL": "https://github.com/zwaldowski/GlueKit",
+        "repositoryURL": "https://github.com/zwaldowski/GlueKit.git",
         "state": {
           "branch": "zwaldowski/swift-5.0",
           "revision": "28055e815ec903cc503315ec4febe69919282a0f",
@@ -32,9 +32,9 @@
         "package": "OptionParser",
         "repositoryURL": "https://github.com/attaswift/OptionParser",
         "state": {
-          "branch": null,
+          "branch": "master",
           "revision": "049f1e2b9d4550c25d99c54e17a045149e723afb",
-          "version": "1.0.0"
+          "version": null
         }
       }
     ]
