@@ -21,7 +21,15 @@ class ChartView: NSView {
             }
         }
     }
-    
+
+	private var legendPositionConnection: Connection? = nil
+	var legendPosition: AnyObservableValue<BenchmarkRenderer.LegendPosition> = .constant(BenchmarkRenderer.LegendPosition.topLeft) {
+		didSet {
+			legendPositionConnection?.disconnect()
+			legendPositionConnection = legendPosition.values.subscribe { [unowned self] _ in self.render() }
+		}
+	}
+
     private var themeConnection: Connection? = nil
     var theme: AnyObservableValue<BenchmarkTheme> = .constant(BenchmarkTheme.Predefined.screen) {
         didSet {
@@ -59,8 +67,9 @@ class ChartView: NSView {
         guard let chart = self.chart else { return nil }
         var options = BenchmarkRenderer.Options()
         let legendMargin = min(0.05 * size.width, 0.05 * size.height)
-        options.showTitle = false
-        options.legendPosition = chart.tasks.count > 10 ? .hidden : .topLeft
+        options.showTitle = true
+        //options.legendPosition = chart.tasks.count > 10 ? .hidden : .bottomLeft
+		options.legendPosition = legendPosition.value
         options.legendHorizontalMargin = legendMargin
         options.legendVerticalMargin = legendMargin
 

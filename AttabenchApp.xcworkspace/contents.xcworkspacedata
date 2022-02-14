@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Attabench.xcodeproj">
+      location = "container:/Users/marin/Desktop/Projects/swift/Attabench-zwaldowski-swift-5.0/AttabenchApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:SampleBenchmark.attabench/SampleBenchmark.xcodeproj">

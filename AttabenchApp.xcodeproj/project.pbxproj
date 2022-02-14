@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,8 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C61452B27BA871400D3D5C2 /* Attabench */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Attabench; sourceTree = "<group>"; };
 		BB35FF981E359756003ABBF3 /* StatusLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusLabel.swift; sourceTree = "<group>"; };
-		BB65B0F31F59BBA4007EB717 /* Attabench.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attabench.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB65B0F31F59BBA4007EB717 /* AttabenchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttabenchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB65B0F51F59BBA5007EB717 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB65B0F71F59BBA5007EB717 /* AttabenchDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttabenchDocument.swift; sourceTree = "<group>"; };
 		BB65B0FA1F59BBA5007EB717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AttabenchDocument.xib; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		BBCC9FB01F5AE11100AE36DE /* ColoredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredView.swift; sourceTree = "<group>"; };
 		BBCC9FB51F5AFA6A00AE36DE /* GlueKitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlueKitTableViewController.swift; sourceTree = "<group>"; };
 		BBCC9FBB1F5B00F400AE36DE /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
-		DBF141ED258FE91D00605C1C /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		BB1DA9C41E2E5923000F2B03 = {
 			isa = PBXGroup;
 			children = (
-				DBF141ED258FE91D00605C1C /*  */,
-				BB65B0F41F59BBA5007EB717 /* Attabench */,
+				9C61452B27BA871400D3D5C2 /* Attabench */,
+				BB65B0F41F59BBA5007EB717 /* AttabenchApp */,
 				BB1DA9CE1E2E5923000F2B03 /* Products */,
 				DBF141CE258FE88D00605C1C /* Frameworks */,
 			);
@@ -72,12 +72,12 @@
 		BB1DA9CE1E2E5923000F2B03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB65B0F31F59BBA4007EB717 /* Attabench.app */,
+				BB65B0F31F59BBA4007EB717 /* AttabenchApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB65B0F41F59BBA5007EB717 /* Attabench */ = {
+		BB65B0F41F59BBA5007EB717 /* AttabenchApp */ = {
 			isa = PBXGroup;
 			children = (
 				BB65B0F51F59BBA5007EB717 /* AppDelegate.swift */,
@@ -98,7 +98,7 @@
 				BBCC9FA61F5AD2B600AE36DE /* attabench.iconset */,
 				BB65B1021F59BBA5007EB717 /* Attabench.entitlements */,
 			);
-			path = Attabench;
+			path = AttabenchApp;
 			sourceTree = "<group>";
 		};
 		DBF141CE258FE88D00605C1C /* Frameworks */ = {
@@ -111,9 +111,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB65B0F21F59BBA4007EB717 /* Attabench */ = {
+		BB65B0F21F59BBA4007EB717 /* AttabenchApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB65B1031F59BBA5007EB717 /* Build configuration list for PBXNativeTarget "Attabench" */;
+			buildConfigurationList = BB65B1031F59BBA5007EB717 /* Build configuration list for PBXNativeTarget "AttabenchApp" */;
 			buildPhases = (
 				BB65B0EF1F59BBA4007EB717 /* Sources */,
 				BB65B0F01F59BBA4007EB717 /* Frameworks */,
@@ -123,12 +123,12 @@
 			);
 			dependencies = (
 			);
-			name = Attabench;
+			name = AttabenchApp;
 			packageProductDependencies = (
 				DBB7BF93258FEB9C00F0F15A /* Attabench */,
 			);
 			productName = Attabench;
-			productReference = BB65B0F31F59BBA4007EB717 /* Attabench.app */;
+			productReference = BB65B0F31F59BBA4007EB717 /* AttabenchApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -153,8 +153,8 @@
 					};
 				};
 			};
-			buildConfigurationList = BB1DA9C81E2E5923000F2B03 /* Build configuration list for PBXProject "Attabench" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = BB1DA9C81E2E5923000F2B03 /* Build configuration list for PBXProject "AttabenchApp" */;
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -168,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB65B0F21F59BBA4007EB717 /* Attabench */,
+				BB65B0F21F59BBA4007EB717 /* AttabenchApp */,
 			);
 		};
 /* End PBXProject section */
@@ -447,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Attabench/Info.plist;
+				INFOPLIST_FILE = AttabenchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -505,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Attabench/Info.plist;
+				INFOPLIST_FILE = AttabenchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -566,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Attabench/Info.plist;
+				INFOPLIST_FILE = AttabenchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -627,7 +627,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Attabench/Info.plist;
+				INFOPLIST_FILE = AttabenchApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -646,7 +646,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB1DA9C81E2E5923000F2B03 /* Build configuration list for PBXProject "Attabench" */ = {
+		BB1DA9C81E2E5923000F2B03 /* Build configuration list for PBXProject "AttabenchApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB1DA9D21E2E5923000F2B03 /* Debug */,
@@ -657,7 +657,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Optimized;
 		};
-		BB65B1031F59BBA5007EB717 /* Build configuration list for PBXNativeTarget "Attabench" */ = {
+		BB65B1031F59BBA5007EB717 /* Build configuration list for PBXNativeTarget "AttabenchApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB65B1041F59BBA5007EB717 /* Debug */,

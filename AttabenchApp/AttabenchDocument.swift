@@ -136,7 +136,8 @@ class AttabenchDocument: NSDocument, BenchmarkDelegate {
             return .mixed
     }
 
-    let theme = Variable<BenchmarkTheme>(BenchmarkTheme.Predefined.screen)
+	let theme = Variable<BenchmarkTheme>(BenchmarkTheme.Predefined.screen)
+	let legendPosition = Variable<BenchmarkRenderer.LegendPosition>(.topLeft)
 
     var _log: NSMutableAttributedString? = nil
     var _status: String = "Ready"
@@ -206,13 +207,19 @@ class AttabenchDocument: NSDocument, BenchmarkDelegate {
     @IBOutlet weak var progressRefreshIntervalField: NSTextField?
     @IBOutlet weak var chartRefreshIntervalField: NSTextField?
 
+	@IBOutlet weak var legendPositionMenu: NSMenuItem?
+
     override init() {
         super.init()
 
         self.glue.connector.connect(self.theme.values) { [unowned self] theme in
             self.m.themeName.value = theme.name
         }
-        
+
+		self.glue.connector.connect(self.legendPosition.values) { [unowned self] position in
+			self.m.legendPosition.value = position.rawValue
+		}
+
         self.glue.connector.connect([tasksToRun.tick, model.map{$0.runOptionsTick}].gather()) { [unowned self] in
             self.updateChangeCount(.changeDone)
             self.runOptionsDidChange()
@@ -266,6 +273,7 @@ class AttabenchDocument: NSDocument, BenchmarkDelegate {
         self.statusLabel!.immediateStatus = _status
         self.chartView!.documentBasename = self.displayName
         self.chartView!.theme = self.theme.anyObservableValue
+		self.chartView!.legendPosition = self.legendPosition.anyObservableValue
         self.batchCheckbox.state = self.batchCheckboxState.value
 
         self.iterationsField!.glue.value <-- model.map{$0.iterations}
@@ -806,6 +814,22 @@ extension AttabenchDocument {
             self.state = .stopping(process, then: .reload)
         }
     }
+
+	@IBAction func setLegendPosition(_ sender: AnyObject) {
+		var position = BenchmarkRenderer.LegendPosition.hidden
+		switch sender.tag {
+		case 1: position = .topLeft
+		case 2: position = .bottomLeft
+		case 3: position = .topRight
+		case 4: position = .bottomRight
+		default: break
+		}
+		self.legendPosition.value = position
+
+		for item in AppDelegate.shared.legendPositionMenu!.items {
+			item.state = item.tag == sender.tag ? .on : .off
+		}
+	}
 
     @IBAction func startStopAction(_ sender: AnyObject) {
         switch state {

@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -26,7 +26,7 @@ let package = Package(
         .target(name: "BenchmarkModel", dependencies: ["BigInt", "GlueKit"], path: "BenchmarkModel"),
         .target(name: "BenchmarkRunner", dependencies: ["Benchmarking", "BenchmarkModel"], path: "BenchmarkRunner"),
         .target(name: "BenchmarkCharts", dependencies: ["BenchmarkModel"], path: "BenchmarkCharts"),
-        .target(name: "attachart", dependencies: ["BenchmarkModel", "BenchmarkCharts", "Benchmarking", "OptionParser"], path: "attachart"),
+        .executableTarget(name: "attachart", dependencies: ["BenchmarkModel", "BenchmarkCharts", "Benchmarking", "OptionParser"], path: "attachart"),
     ],
     swiftLanguageVersions: [.v5]
 )

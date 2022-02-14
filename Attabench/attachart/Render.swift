@@ -80,9 +80,10 @@ extension Attaresult {
         }
 
         var renderOptions = BenchmarkRenderer.Options()
-        renderOptions.showTitle = false
+        renderOptions.showTitle = true
         renderOptions.legendHorizontalMargin = 0.04 * min(imageSize.width, imageSize.height)
         renderOptions.legendVerticalMargin = renderOptions.legendHorizontalMargin
+		renderOptions.legendPosition = .bottomLeft
 
         let renderer = BenchmarkRenderer(
             chart: chart,

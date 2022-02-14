@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -12,7 +12,11 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Attabench" customModuleProvider="target"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="AttabenchApp" customModuleProvider="target">
+            <connections>
+                <outlet property="legendPositionMenu" destination="R4v-nE-t8b" id="Huh-aR-Dxc"/>
+            </connections>
+        </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
@@ -669,6 +673,51 @@ CA
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Chart" id="QrF-hs-kYQ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Chart" id="sn2-fL-Ewh">
+                        <items>
+                            <menuItem title="Legend Position" id="dfR-ke-AbH">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" id="R4v-nE-t8b">
+                                    <items>
+                                        <menuItem title="Top left" tag="1" id="k2m-J0-hQP">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="setLegendPosition:" target="-1" id="KQH-Ef-4IQ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bottom left" tag="2" id="dRb-Q5-Q6x">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="setLegendPosition:" target="-1" id="VAG-8c-D9L"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Top right" tag="3" id="J1k-W0-b67">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="setLegendPosition:" target="-1" id="cRc-BD-ps9"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bottom right" tag="4" id="iMZ-ly-0lj">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="setLegendPosition:" target="-1" id="1yb-hk-PL7"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="Kb8-vu-Ukr"/>
+                                        <menuItem title="Hidden" id="TvK-oS-m7o">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="setLegendPosition:" target="-1" id="f2D-4J-JYI"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Window" id="aUF-d1-5bR">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
@@ -707,6 +756,7 @@ CA
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="139" y="-56"/>
         </menu>
     </objects>
 </document>

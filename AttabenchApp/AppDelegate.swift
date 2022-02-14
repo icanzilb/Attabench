@@ -6,7 +6,12 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+	static var shared: AppDelegate!
+
+	@IBOutlet weak var legendPositionMenu: NSMenu?
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+		Self.shared = self
         // Insert code here to initialize your application
     }
 

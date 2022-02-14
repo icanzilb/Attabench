@@ -98,6 +98,8 @@ public class Attaresult: NSObject, Codable {
     public let displayIncludeAllMeasuredTimes: BoolVariable = true
 
     public let themeName: StringVariable = ""
+	public let legendPosition: StringVariable = ""
+
     public let progressRefreshInterval: Variable<Time> = .init(0.2)
     public let chartRefreshInterval: Variable<Time> = .init(0.5)
 
@@ -155,6 +157,7 @@ public class Attaresult: NSObject, Codable {
         case displayIncludeTimeRange
         case displayIncludeAllMeasuredTimes
         case themeName
+		case legendPosition
         case progressRefreshInterval
         case chartRefreshInterval
     }
@@ -190,6 +193,7 @@ public class Attaresult: NSObject, Codable {
         try container.encode(self.displayIncludeAllMeasuredTimes.value, forKey: .displayIncludeAllMeasuredTimes)
 
         try container.encode(self.themeName.value, forKey: .themeName)
+		try container.encode(self.legendPosition.value, forKey: .legendPosition)
         try container.encode(self.progressRefreshInterval.value, forKey: .progressRefreshInterval)
         try container.encode(self.chartRefreshInterval.value, forKey: .chartRefreshInterval)
     }
@@ -265,6 +269,9 @@ public class Attaresult: NSObject, Codable {
         if let v = try container.decodeIfPresent(String.self, forKey: .themeName) {
             self.themeName.value = v
         }
+		if let v = try container.decodeIfPresent(String.self, forKey: .legendPosition) {
+			self.legendPosition.value = v
+		}
         if let v = try container.decodeIfPresent(Time.self, forKey: .progressRefreshInterval) {
             self.progressRefreshInterval.value = v
         }

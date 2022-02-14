@@ -17,7 +17,7 @@ public struct BenchmarkRenderer {
         public init() {}
     }
 
-    public enum LegendPosition {
+	public enum LegendPosition: String, Codable {
         case hidden
         case topLeft
         case topRight

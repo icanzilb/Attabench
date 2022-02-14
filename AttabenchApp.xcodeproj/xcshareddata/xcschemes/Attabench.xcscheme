@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1230"
+   LastUpgradeVersion = "1320"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BB65B0F21F59BBA4007EB717"
-               BuildableName = "Attabench.app"
-               BlueprintName = "Attabench"
-               ReferencedContainer = "container:Attabench.xcodeproj">
+               BuildableName = "AttabenchApp.app"
+               BlueprintName = "AttabenchApp"
+               ReferencedContainer = "container:AttabenchApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BB65B0F21F59BBA4007EB717"
-            BuildableName = "Attabench.app"
-            BlueprintName = "Attabench"
-            ReferencedContainer = "container:Attabench.xcodeproj">
+            BuildableName = "AttabenchApp.app"
+            BlueprintName = "AttabenchApp"
+            ReferencedContainer = "container:AttabenchApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -54,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BB65B0F21F59BBA4007EB717"
-            BuildableName = "Attabench.app"
-            BlueprintName = "Attabench"
-            ReferencedContainer = "container:Attabench.xcodeproj">
+            BuildableName = "AttabenchApp.app"
+            BlueprintName = "AttabenchApp"
+            ReferencedContainer = "container:AttabenchApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BB65B0F21F59BBA4007EB717"
-            BuildableName = "Attabench.app"
-            BlueprintName = "Attabench"
-            ReferencedContainer = "container:Attabench.xcodeproj">
+            BuildableName = "AttabenchApp.app"
+            BlueprintName = "AttabenchApp"
+            ReferencedContainer = "container:AttabenchApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
